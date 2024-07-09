@@ -46,13 +46,13 @@ export default function Home() {
   ];
   return (
     <div className="w-full">
-      <section className="bg-slate-800 text-white grid md:grid-cols-2 justify-center h-max py-8 sm:px-[10vh] md:px-[17vh]">
-        <div className="p-3 px-5 sm:p-5 text-left">
+      <section className="bg-slate-800 text-white justify-center h-max py-8 sm:px-[10vh] md:px-[17vh]">
+        <div className="p-3 px-5 sm:p-5 h-[45vh] flex flex-col justify-center items-center text-center">
           <p className="text-[35px] sm:text-[40px] md:text-[50px] font-bold">
             Stay Informed,
             <br /> Seize Oppurtunities
           </p>
-          <p className="text-[17px]">
+          <p className="text-[17px] w-3/4">
             NextStep is your one-stop platform for the latest updates on
             hackathons, coding contests, certifications, jobs, and internships.
             Never miss an opportunity to grow your skills and advance your
@@ -63,7 +63,6 @@ export default function Home() {
             <Button variant="secondary">Explore Resources</Button>
           </div>
         </div>
-        <div className="hidden sm:flex items-center justify-center">Image</div>
       </section>
       <div className="flex flex-col gap-4 px-5 md:px-14 my-4">
         {tabsList.map((tab, index) => {
