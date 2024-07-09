@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { Libre_Franklin } from "next/font/google";
 import { Chivo } from "next/font/google";
-import Navbar from "@/components/navbar/navbar";
-import Footer from "@/components/footer/footer";
+import { HomeIcon, LayersIcon } from "@radix-ui/react-icons";
+import { AwardIcon, BookIcon, HeadphonesIcon } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+import { CardTitle } from "@/components/ui/card";
+import AptitudeSidebar from "./sidebar";
 
 const libre_franklin = Libre_Franklin({
   subsets: ["latin"],
@@ -17,7 +20,7 @@ const chivo = Chivo({
 });
 
 export const metadata: Metadata = {
-  title: "Nextstep",
+  title: "Aptitude",
   description: "Taking you Further",
 };
 
@@ -27,12 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="--font-chivo --font-libre_franklin min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
-      </body>
-    </html>
+    <div className="flex-1 flex">
+      <AptitudeSidebar />
+      <div className="flex-grow">{children}</div>
+    </div>
   );
 }
